@@ -7,63 +7,98 @@
     <!-- Lien vers le CDN de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-KyZXEJ+Koa7zL0AF4thD5gU9xwjPy+fr6Ib0Iu40A+6h5+/RzHVZlD4W2U8+Uu6F" crossorigin="anonymous">
     <style>
-        /* Personnalisation du style */
+        /* Personnalisation des couleurs et styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
+            background-color: #f8f9fa;
         }
         header {
             background-color: #ffcc00;
-            padding: 20px;
-            font-size: 24px;
+            color: #333;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 36px;
             font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         section {
-            padding: 20px;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .product-section {
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
         footer {
             background-color: #333;
             color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+        }
+        .btn-primary:hover {
+            background-color: #e6b800;
+            border-color: #e6b800;
         }
     </style>
 </head>
 <body>
     <!-- En-tête -->
-    <header>Cookou - La meilleure farine pour friture</header>
+    <header>
+        Cookou - La meilleure farine pour friture
+    </header>
 
-    <!-- Contenu principal -->
-    <div class="container mt-5">
-        <h1 class="text-center">Bienvenue sur mon site</h1>
-        <p class="text-center">Ce site utilise Bootstrap pour un design moderne.</p>
-    </div>
+    <!-- Section de bienvenue -->
+    <section class="container">
+        <h1 class="display-4">Bienvenue sur Cookou</h1>
+        <p class="lead">Découvrez notre farine spécialement conçue pour des fritures croustillantes et savoureuses.</p>
+        <a href="#produit" class="btn btn-primary btn-lg">Voir notre produit</a>
+    </section>
 
-    <!-- Section Produit -->
-    <section>
-        <h1>Bienvenue sur Cookou</h1>
-        <p>Découvrez notre farine spéciale pour des fritures croustillantes et savoureuses.</p>
+    <!-- Section produit -->
+    <section id="produit" class="product-section">
+        <div class="container">
+            <h2 class="display-4">Notre Produit</h2>
+            <p>Notre farine unique garantit une texture parfaite pour tous vos plats frits.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/500" alt="Farine pour friture" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3>Pourquoi choisir Cookou ?</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle"></i> Texture parfaite</li>
+                        <li><i class="bi bi-check-circle"></i> Idéale pour tous types de fritures</li>
+                        <li><i class="bi bi-check-circle"></i> Facile à utiliser</li>
+                    </ul>
+                    <a href="mailto:contact@cookou.fr" class="btn btn-primary">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <!-- Section Produit -->
-    <section>
-        <h2>Notre produit</h2>
-        <p>Une farine spécialement conçue pour obtenir une texture parfaite.</p>
-    </section>
-    
+
     <!-- Section Contact -->
-    <section>
-        <h2>Contact</h2>
-        <p>Email : contact@cookou.fr</p>
+    <section id="contact">
+        <div class="container">
+            <h2 class="display-4">Contact</h2>
+            <p>Email : <a href="mailto:contact@cookou.fr" class="text-decoration-none">contact@cookou.fr</a></p>
+            <a href="#footer" class="btn btn-primary">Retour en bas</a>
+        </div>
     </section>
 
     <!-- Pied de page -->
-    <footer>
-        &copy; 2024 Cookou - Tous droits réservés.
+    <footer id="footer">
+        <p>&copy; 2024 Cookou - Tous droits réservés.</p>
     </footer>
 
     <!-- Lien vers le JS de Bootstrap -->
