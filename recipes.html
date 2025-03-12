@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes - Cookou</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .nav-link {
+            color: #2c3e50;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #e67e22;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .recipe-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .recipe-card:hover {
+            transform: scale(1.03);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="LOGO COOKOU.png" alt="Cookou Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html#products">Produits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="recipes.html">Recettes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">À Propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Avis</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Nos Recettes pour Friture</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Beignets de Poulet à la Cannelle (France)</h4>
+                        <p>Des morceaux de poulet marinés, enrobés de farine Cannelle et frits jusqu’à obtenir une croûte dorée et parfumée.</p>
+                        <p><strong>Ingrédients :</strong> 500g de poulet, 200g de farine Cannelle, huile de friture, miel.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Poisson Frit aux Herbes (Italie)</h4>
+                        <p>Filets de cabillaud enrobés de farine Herbes, frits avec une touche de citron pour un goût méditerranéen.</p>
+                        <p><strong>Ingrédients :</strong> 4 filets de cabillaud, 200g de farine Herbes, citron, huile.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Crevettes Spicy Tempura (Japon)</h4>
+                        <p>Crevettes décortiquées enrobées de farine Spicy, frites façon tempura pour une texture légère et piquante.</p>
+                        <p><strong>Ingrédients :</strong> 300g de crevettes, 150g de farine Spicy, eau glacée, sauce soja.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Ailes de Poulet Classique (États-Unis)</h4>
+                        <p>Ailes de poulet frites avec la farine Classique pour un croustillant parfait, servies avec une sauce BBQ.</p>
+                        <p><strong>Ingrédients :</strong> 12 ailes de poulet, 200g de farine Classique, huile, sauce BBQ.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Calamars Frit aux Herbes (Grèce)</h4>
+                        <p>Rondelles de calamars enrobées de farine Herbes, frites et servies avec du tzatziki.</p>
+                        <p><strong>Ingrédients :</strong> 400g de calamars, 200g de farine Herbes, huile, yaourt grec.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Beignets de Courgettes Cannelle (Maroc)</h4>
+                        <p>Tranches de courgettes frites avec la farine Cannelle, saupoudrées de sucre pour une touche sucrée-épicée.</p>
+                        <p><strong>Ingrédients :</strong> 2 courgettes, 150g de farine Cannelle, huile, sucre.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Filets de Tilapia Spicy (Afrique)</h4>
+                        <p>Tilapia frit avec la farine Spicy, accompagné d’une sauce pimentée à la mangue.</p>
+                        <p><strong>Ingrédients :</strong> 4 filets de tilapia, 200g de farine Spicy, huile, mangue.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Beignets de Crevettes Classique (Vietnam)</h4>
+                        <p>Crevettes entières frites avec la farine Classique, servies avec une sauce nuoc-mâm.</p>
+                        <p><strong>Ingrédients :</strong> 300g de crevettes, 150g de farine Classique, huile, nuoc-mâm.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Aubergines Frites aux Herbes (Inde)</h4>
+                        <p>Tranches d’aubergine enrobées de farine Herbes, frites et servies avec un chutney de coriandre.</p>
+                        <p><strong>Ingrédients :</strong> 1 aubergine, 150g de farine Herbes, huile, coriandre.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recipe-card">
+                        <h4>Poulet Frit Spicy Katsu (Japon)</h4>
+                        <p>Escalopes de poulet frites avec la farine Spicy, inspirées du katsu, avec une sauce tonkatsu.</p>
+                        <p><strong>Ingrédients :</strong> 2 escalopes de poulet, 200g de farine Spicy, huile, sauce tonkatsu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Cookou. Tous droits réservés. <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+    </footer>
+</body>
+</html>
