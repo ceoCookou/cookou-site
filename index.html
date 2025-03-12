@@ -122,4 +122,66 @@
             margin-right: 15px;
         }
 
-        header
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="LOGO COOKOU.png" alt="Cookou Logo" class="logo">
+        Farine pour friture
+    </header>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Cookou</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#products">Nos Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">À Propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <h1>Les meilleures farines pour une friture parfaite</h1>
+        <p>Ajoutez du goût à vos plats avec nos farines soigneusement sélectionnées.</p>
+        <a href="#products" class="btn-custom">Découvrir nos saveurs</a>
+    </section>
+
+    <section id="products" class="product-section">
+        <div class="container">
+            <h2>Nos Saveurs Classiques</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="IMG_20250224_112049.jpg" alt="Saveur Cannelle">
+                        </div>
+                        <div class="product-info">
+                            <h4>Saveur Cannelle</h4>
+                            <p>Une touche sucrée et épicée pour vos fritures. Un classique incontournable !</p>
+                            <button class="buy-button">Acheter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cookou. Tous droits réservés. <a href="#">Mentions légales</a></p>
+    </footer>
+</body>
+
+</html>
