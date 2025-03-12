@@ -313,4 +313,91 @@
                 </div>
                 <div class="col-md-6 fade-in">
                     <div class="recipe-card">
-                        <h4>Aubergines Frites aux Herbes (Ind
+                        <h4>Aubergines Frites aux Herbes (Inde)</h4>
+                        <p>Tranches d’aubergine enrobées de farine Herbes, frites et servies avec un chutney de coriandre.</p>
+                        <p><strong>Ingrédients :</strong> 1 aubergine, 150g de farine Herbes, huile, coriandre.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 fade-in">
+                    <div class="recipe-card">
+                        <h4>Poulet Frit Spicy Katsu (Japon)</h4>
+                        <p>Escalopes de poulet frites avec la farine Spicy, inspirées du katsu, avec une sauce tonkatsu.</p>
+                        <p><strong>Ingrédients :</strong> 2 escalopes de poulet, 200g de farine Spicy, huile, sauce tonkatsu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>À Propos de Cookou</h2>
+            <p class="text-center">Chez Cookou, nous croyons que la friture peut être une expérience gourmande. Nos farines sont élaborées avec soin pour offrir des saveurs uniques et une texture parfaite à vos plats. Découvrez une nouvelle façon de frire !</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section" style="background: #f1f3f5;">
+        <div class="container">
+            <h2>Avis Clients</h2>
+            <div class="row">
+                <div class="col-md-4 fade-in">
+                    <div class="testimonial-card">
+                        <p>"La farine Spicy a transformé mes nuggets, un régal !"</p>
+                        <p><strong>- Marie D.</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="testimonial-card">
+                        <p>"J’adore la saveur Herbes, parfaite pour mes poissons frits."</p>
+                        <p><strong>- Julien P.</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="testimonial-card">
+                        <p>"Simple et efficace, la Classique ne déçoit jamais."</p>
+                        <p><strong>- Sophie L.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Nom">
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="col-12">
+                    <textarea class="form-control" rows="5" placeholder="Votre message"></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Cookou. Tous droits réservés. <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+    </footer>
+
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
