@@ -3,324 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farine pour friture - Cookou Futuriste</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Farine pour friture - Cookou</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        :root {
-            --primary: #00d4ff;
-            --secondary: #ff00ff;
-            --bg-light: #1a1a2e;
-            --bg-dark: #0f0f23;
-            --text-light: #e0e0e0;
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, var(--bg-light), var(--bg-dark));
-            color: var(--text-light);
-            transition: all 0.5s ease;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        body.light-mode {
-            background: #f4f4f4;
-            color: #333;
-        }
-
         header {
-            background: rgba(10, 10, 20, 0.9);
-            padding: 20px;
-            text-align: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--primary);
-            text-shadow: 0 0 10px var(--primary);
-            position: fixed;
-            width: 100%;
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
             top: 0;
             z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .navbar {
-            background: rgba(20, 20, 40, 0.9);
-            padding: 15px 0;
-            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
-            margin-top: 80px; /* Ajustement pour éviter chevauchement avec header fixe */
+            padding: 0;
         }
 
-        .navbar .nav-link {
-            color: var(--text-light);
-            font-family: 'Orbitron', sans-serif;
-            transition: color 0.3s;
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #2c3e50;
         }
 
-        .navbar .nav-link:hover {
-            color: var(--primary);
-            text-shadow: 0 0 5px var(--primary);
+        .nav-link {
+            color: #2c3e50;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #e67e22;
         }
 
         .hero-section {
-            background: url('https://github.com/ceoCookou/cookou-site/blob/main/background.jpg?raw=true') no-repeat center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://github.com/ceoCookou/cookou-site/blob/main/background.jpg?raw=true') no-repeat center/cover;
             padding: 120px 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 80px; /* Ajustement pour header fixe */
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(0, 212, 255, 0.2), rgba(255, 0, 255, 0.2));
-            z-index: 1;
+            color: #fff;
         }
 
         .hero-section h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 56px;
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
             font-weight: 700;
-            color: var(--text-light);
-            text-shadow: 0 0 15px var(--primary);
-            position: relative;
-            z-index: 2;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
         }
 
-        .btn-custom {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 18px;
+        .btn-primary {
+            background-color: #e67e22;
             border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 18px;
             transition: all 0.3s ease;
         }
 
-        .btn-custom:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px var(--primary);
+        .btn-primary:hover {
+            background-color: #d35400;
+            transform: scale(1.05);
         }
 
-        .product-section {
-            padding: 100px 0;
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #2c3e50;
             text-align: center;
-            background: rgba(20, 20, 40, 0.7);
+            margin-bottom: 40px;
         }
 
         .product-card {
-            background: rgba(40, 40, 80, 0.8);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-            margin-bottom: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
 
         .product-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .product-image img {
-            width: 100%;
             max-width: 180px;
             height: auto;
-            margin: 20px auto;
-            filter: drop-shadow(0 0 10px var(--primary));
+            margin-bottom: 20px;
         }
 
         .buy-button {
-            background: var(--primary);
-            color: white;
-            padding: 12px 25px;
+            background-color: #e67e22;
+            color: #fff;
             border: none;
-            border-radius: 10px;
-            font-family: 'Orbitron', sans-serif;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
             transition: all 0.3s ease;
         }
 
         .buy-button:hover {
-            background: var(--secondary);
-            transform: scale(1.1);
-            box-shadow: 0 0 15px var(--secondary);
+            background-color: #d35400;
+            transform: scale(1.05);
+        }
+
+        .recipe-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: scale(1.03);
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
         }
 
         footer {
-            background: var(--bg-dark);
-            color: var(--text-light);
-            padding: 50px 0;
+            background: #2c3e50;
+            color: #fff;
+            padding: 40px 0;
             text-align: center;
-            font-family: 'Orbitron', sans-serif;
+        }
+
+        footer a {
+            color: #e67e22;
+            text-decoration: none;
         }
 
         .logo {
-            height: 60px;
-            filter: drop-shadow(0 0 10px var(--primary));
-        }
-
-        #scrollTopBtn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
             height: 50px;
-            font-size: 20px;
-            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
             opacity: 0;
-            transition: all 0.3s ease;
+            animation: fadeIn 1s ease forwards;
         }
 
-        #scrollTopBtn.visible {
-            opacity: 1;
-        }
-
-        #themeToggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--secondary);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            cursor: pointer;
-            font-family: 'Orbitron', sans-serif;
+        @keyframes fadeIn {
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="LOGO COOKOU.png" alt="Cookou Logo" class="logo">
-        Farine pour friture
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">Cookou</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#products">Produits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#recipes">Recettes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">À Propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Avis</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <button id="themeToggle">Mode Sombre/Clair</button>
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">Cookou</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#products">Nos Produits</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">À Propos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <section class="hero-section">
-        <h1>Les meilleures farines pour une friture parfaite</h1>
-        <p>Ajoutez du goût à vos plats avec nos farines soigneusement sélectionnées.</p>
-        <a href="#products" class="btn-custom">Découvrir nos saveurs</a>
+        <div class="container">
+            <img src="LOGO COOKOU.png" alt="Cookou Logo" class="logo">
+            <h1>Farine pour friture d’exception</h1>
+            <p>Découvrez nos 4 saveurs uniques pour sublimer vos plats frits.</p>
+            <a href="#products" class="btn btn-primary">Explorer nos produits</a>
+        </div>
     </section>
 
-    <section id="products" class="product-section">
+    <section id="products" class="section">
         <div class="container">
-            <h2>Nos Saveurs Classiques</h2>
+            <h2>Nos Saveurs</h2>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 fade-in">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="IMG_20250224_112049.jpg" alt="Saveur Cannelle">
                         </div>
-                        <div class="product-info">
-                            <h4>Saveur Cannelle</h4>
-                            <p>Une touche sucrée et épicée pour vos fritures.</p>
-                            <button class="buy-button" onclick="addToCart('Saveur Cannelle')">Acheter</button>
-                        </div>
+                        <h4>Saveur Cannelle</h4>
+                        <p>Une note sucrée et épicée pour vos fritures.</p>
+                        <button class="buy-button">Acheter</button>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 fade-in">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="IMG_20250224_110133.jpg" alt="Saveur Herbes">
                         </div>
-                        <div class="product-info">
-                            <h4>Saveur Herbes</h4>
-                            <p>Une combinaison d'herbes fines et aromatiques.</p>
-                            <button class="buy-button" onclick="addToCart('Saveur Herbes')">Acheter</button>
-                        </div>
+                        <h4>Saveur Herbes</h4>
+                        <p>Des herbes fines pour une touche aromatique.</p>
+                        <button class="buy-button">Acheter</button>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 fade-in">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="IMG_20250224_111101.jpg" alt="Saveur Spicy">
                         </div>
-                        <div class="product-info">
-                            <h4>Saveur Spicy</h4>
-                            <p>Un peu de piquant pour relever vos plats frits.</p>
-                            <button class="buy-button" onclick="addToCart('Saveur Spicy')">Acheter</button>
-                        </div>
+                        <h4>Saveur Spicy</h4>
+                        <p>Un peu de piquant pour vos plats frits.</p>
+                        <button class="buy-button">Acheter</button>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 fade-in">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="IMG_20250224_111945.jpg" alt="Saveur Classique">
                         </div>
-                        <div class="product-info">
-                            <h4>Saveur Classique</h4>
-                            <p>La base parfaite pour une friture légère.</p>
-                            <button class="buy-button" onclick="addToCart('Saveur Classique')">Acheter</button>
-                        </div>
+                        <h4>Saveur Classique</h4>
+                        <p>La base parfaite pour une friture légère.</p>
+                        <button class="buy-button">Acheter</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="recipes" class="section" style="background: #f1f3f5;">
+        <div class="container">
+            <h2>Idées de Recettes</h2>
+            <div class="row">
+                <div class="col-md-4 fade-in">
+                    <div class="recipe-card">
+                        <h4>Beignets à la Cannelle</h4>
+                        <p>Des beignets dorés avec notre farine saveur Cannelle, parfaits pour le dessert.</p>
+                        <a href="#" class="btn btn-outline-primary">Voir la recette</a>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="recipe-card">
+                        <h4>Poulet Frit aux Herbes</h4>
+                        <p>Un poulet croustillant avec notre farine saveur Herbes.</p>
+                        <a href="#" class="btn btn-outline-primary">Voir la recette</a>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="recipe-card">
+                        <h4>Calamars Spicy</h4>
+                        <p>Des calamars frits relevés avec notre farine Spicy.</p>
+                        <a href="#" class="btn btn-outline-primary">Voir la recette</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>À Propos de Cookou</h2>
+            <p class="text-center">Chez Cookou, nous croyons que la friture peut être une expérience gourmande. Nos farines sont élaborées avec soin pour offrir des saveurs uniques et une texture parfaite à vos plats. Découvrez une nouvelle façon de frire !</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section" style="background: #f1f3f5;">
+        <div class="container">
+            <h2>Avis Clients</h2>
+            <div class="row">
+                <div class="col-md-4 fade-in">
+                    <div class="testimonial-card">
+                        <p>"La farine Spicy a transformé mes nuggets, un régal !"</p>
+                        <p><strong>- Marie D.</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="testimonial-card">
+                        <p>"J’adore la saveur Herbes, parfaite pour mes poissons frits."</p>
+                        <p><strong>- Julien P.</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="testimonial-card">
+                        <p>"Simple et efficace, la Classique ne déçoit jamais."</p>
+                        <p><strong>- Sophie L.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Nom">
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="col-12">
+                    <textarea class="form-control" rows="5" placeholder="Votre message"></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2025 Cookou. Tous droits réservés. <a href="#">Mentions légales</a></p>
+        <p>© 2025 Cookou. Tous droits réservés. <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
     </footer>
 
-    <button id="scrollTopBtn">↑</button>
-
     <script>
-        // Mode sombre/clair
-        const themeToggle = document.getElementById('themeToggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-        });
+        // Animation au scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.2 });
 
-        // Bouton retour en haut
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-        });
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Simulation panier
-        let cart = [];
-        function addToCart(item) {
-            cart.push(item);
-            alert(`${item} ajouté au panier ! Panier : ${cart.join(', ')}`);
-        }
+        fadeElements.forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
