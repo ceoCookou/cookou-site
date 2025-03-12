@@ -30,10 +30,8 @@
             padding: 0;
         }
 
-        .navbar-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            color: #2c3e50;
+        .navbar-brand img {
+            height: 50px;
         }
 
         .nav-link {
@@ -178,14 +176,14 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">Cookou</a>
+                <a class="navbar-brand" href="#"><img src="LOGO COOKOU.png" alt="Cookou Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#products">Produits</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#recipes">Recettes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="recipes.html">Recettes</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">À Propos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#testimonials">Avis</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -252,35 +250,6 @@
         </div>
     </section>
 
-    <section id="recipes" class="section" style="background: #f1f3f5;">
-        <div class="container">
-            <h2>Idées de Recettes</h2>
-            <div class="row">
-                <div class="col-md-4 fade-in">
-                    <div class="recipe-card">
-                        <h4>Beignets à la Cannelle</h4>
-                        <p>Des beignets dorés avec notre farine saveur Cannelle, parfaits pour le dessert.</p>
-                        <a href="#" class="btn btn-outline-primary">Voir la recette</a>
-                    </div>
-                </div>
-                <div class="col-md-4 fade-in">
-                    <div class="recipe-card">
-                        <h4>Poulet Frit aux Herbes</h4>
-                        <p>Un poulet croustillant avec notre farine saveur Herbes.</p>
-                        <a href="#" class="btn btn-outline-primary">Voir la recette</a>
-                    </div>
-                </div>
-                <div class="col-md-4 fade-in">
-                    <div class="recipe-card">
-                        <h4>Calamars Spicy</h4>
-                        <p>Des calamars frits relevés avec notre farine Spicy.</p>
-                        <a href="#" class="btn btn-outline-primary">Voir la recette</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="about" class="section">
         <div class="container">
             <h2>À Propos de Cookou</h2>
@@ -339,7 +308,6 @@
     </footer>
 
     <script>
-        // Animation au scroll
         const fadeElements = document.querySelectorAll('.fade-in');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
